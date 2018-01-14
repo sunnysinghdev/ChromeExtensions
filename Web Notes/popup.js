@@ -6,6 +6,8 @@ var code = 'var meta = document.querySelector("meta[name=\'description\']");' +
     '    description: meta || ""' +
     '});';
 document.addEventListener("DOMContentLoaded", function() {
+    var manifestData = chrome.runtime.getManifest();
+    getId("version").innerText = manifestData.version;
     chrome.tabs.query({ 'active': true, 'lastFocusedWindow': true }, function(tabs) {
         cur_url = tabs[0].url;
 
