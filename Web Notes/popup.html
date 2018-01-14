@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <style type="text/css">
+        body {
+            width: 350px;
+            height: 500px;
+            background: white;
+        }
+        
+        .container {
+            width: 330px;
+        }
+        
+        textarea.transparent-input {
+            background-color: lightyellow !important;
+            border: 0 none !important;
+            outline: none;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+            border-color: rgba(0, 0, 0, 0);
+            resize: none;
+        }
+        
+        input.transparent-input {
+            border: 0 none !important;
+            outline: none;
+            border-bottom: 1px solid blue !important;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+            resize: none;
+        }
+        
+        .remove-space {
+            padding: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h4><img height="20" width="20" src='http://www.google.com/s2/favicons?domain=github.sunnysinghdev.com' /> Web Notes</h4>
+        </div>
+        <div class="row" style="border:1px solid lightgray" hre>
+
+            <div class="row">
+                <div class="col-xs-2" style="padding-top:5px;padding-left:20px;">
+                    <img id="web_icon" height="30px" width="30px" src='' />
+                </div>
+                <div class="col-xs-10" style="vertical-align:middle;">
+                    <label id="web_title" class="medium"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12" style="padding-top:1px;padding-left:20px;">
+                    <p id="desc" class="small"></p>
+                    <a id="web_link" href="" target="_blank"><span id="link_text"></span></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="form-group">
+                <textarea id="notes" rows="15" class="form-control transparent-input" placeholder="Enter notes"></textarea>
+                <label for="tag" class="col-xs-2 remove-space text-right" style="padding-top:7px;vertical-align:middle;">
+                    <i class="glyphicon glyphicon-tag"></i>Tag:</label>
+                <div class="col-xs-8 remove-space">
+                    <input id="tag" class="form-control transparent-input" placeholder="Enter label in url" value="" />
+
+                </div>
+                <div class="col-xs-2 remove-space">
+                    <button id="btn_save" class="btn btn-primary">
+                            <i class="glyphicon glyphicon-floppy-disk"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+<script src="csv.js"></script>
+<script src="popup.js"></script>
+
+</html>
