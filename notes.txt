@@ -1,0 +1,2 @@
+permission is important in manifest file.
+browserAction onClick not required . it can be written in popup.js
